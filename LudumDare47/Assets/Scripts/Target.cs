@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-
     public float health;
+    public bool isBarrel;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +22,17 @@ public class Target : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
-        if(health < 0)
+
+        if(health <= 0)
         {
-            Destroy(gameObject);
+            if (isBarrel)
+            {
+                GetComponentInParent<BarrelTile>().ExplodeBarrel();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

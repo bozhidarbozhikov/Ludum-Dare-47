@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public WaypointCreator waypointCreator;
     public Rigidbody2D rb;
+    public Transform minecart;
     public float speed;
     List<Vector3> waypoints;
 
@@ -30,11 +31,13 @@ public class PlayerMovement : MonoBehaviour
             if (index < waypoints.Count - 1)
             {
                 currentWaypoint = waypoints[index];
+                TurnMinecart(currentWaypoint);
             }
             else
             {
                 index = 0;
                 currentWaypoint = waypoints[0];
+                TurnMinecart(currentWaypoint);
             }
         }
     }
@@ -44,5 +47,17 @@ public class PlayerMovement : MonoBehaviour
         direction = currentWaypoint - transform.position;
 
         transform.Translate(direction.normalized * speed * Time.fixedDeltaTime);
+    }
+
+    void TurnMinecart(Vector3 destination)
+    {
+        if ((int)destination.x == (int)transform.position.x)
+        {
+            minecart.eulerAngles = Vector3.zero;
+        }
+        else if ((int)destination.y == (int)transform.position.y)
+        {
+            minecart.eulerAngles = Vector3.forward * 90;
+        }
     }
 }
