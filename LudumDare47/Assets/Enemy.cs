@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public Animator animator;
 
     public float attackRate;
+    public float damage;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
-        //damage player
+        FindObjectOfType<PlayerHealth>().TakeDamage(damage);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

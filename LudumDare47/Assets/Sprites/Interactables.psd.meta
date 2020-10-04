@@ -92,6 +92,27 @@ TextureImporter:
   - first:
       213: 6411479227677331012
     second: Interactables_14
+  - first:
+      213: -1128302104622781036
+    second: Interactables_9
+  - first:
+      213: 51524825682897245
+    second: Interactables_10
+  - first:
+      213: 5627643390661433536
+    second: Interactables_11
+  - first:
+      213: -7135274076187230095
+    second: Interactables_12
+  - first:
+      213: 5344079071723688901
+    second: Interactables_13
+  - first:
+      213: 5867289550968428970
+    second: Interactables_14
+  - first:
+      213: 7899534345522432149
+    second: Interactables_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -394,8 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5763397c0d5535c90800000000000000
-      internalID: -7182302625535936907
+      spriteID: 49d22aeb6377750f0800000000000000
+      internalID: -1128302104622781036
       vertices: []
       indices: 
       edges: []
@@ -415,8 +436,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07df3d06a998792f0800000000000000
-      internalID: -966152298905207440
+      spriteID: d5961f35e8d07b000800000000000000
+      internalID: 51524825682897245
       vertices: []
       indices: 
       edges: []
@@ -436,8 +457,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b14fb1080e489ca70800000000000000
-      internalID: 8847749042702906395
+      spriteID: 0c813f6e8d7691e40800000000000000
+      internalID: 5627643390661433536
       vertices: []
       indices: 
       edges: []
@@ -457,8 +478,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e37c637c779f7460800000000000000
-      internalID: 7241673286603273186
+      spriteID: 1708ec1380a6afc90800000000000000
+      internalID: -7135274076187230095
       vertices: []
       indices: 
       edges: []
@@ -478,8 +499,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a20dd01374965be0800000000000000
-      internalID: -1488839404874300763
+      spriteID: 5c390b10a9bf92a40800000000000000
+      internalID: 5344079071723688901
       vertices: []
       indices: 
       edges: []
@@ -499,8 +520,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44ec08a53662af850800000000000000
-      internalID: 6411479227677331012
+      spriteID: aa995d7a2cccc6150800000000000000
+      internalID: 5867289550968428970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interactables_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598ccdb32a8c0ad60800000000000000
+      internalID: 7899534345522432149
       vertices: []
       indices: 
       edges: []
