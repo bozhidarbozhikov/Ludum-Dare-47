@@ -15,6 +15,8 @@ public class Cobweb : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("CobwebStuck");
+
             playerMovement.canMove = false;
         }
     }

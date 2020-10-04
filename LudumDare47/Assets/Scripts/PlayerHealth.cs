@@ -28,10 +28,13 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damage;
 
+        FindObjectOfType<AudioManager>().Play("TreasureHit");
+
         spriteRenderer.sprite = UpdatedSprite();
 
         if (health <= 0)
         {
+            FindObjectOfType<AudioManager>().Play("TreasureDie");
             //end game
         }
     }

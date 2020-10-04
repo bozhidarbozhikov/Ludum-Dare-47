@@ -10,15 +10,21 @@ public class BarrelTile : MonoBehaviour
     public float explosionDamage;
     public float barrelSpawnDelay;
     public float health;
+    public float duration;
+    public float magnitude;
+
 
     public CapsuleCollider2D capcol;
     public SpriteRenderer spriteRenderer;
     public Target target;
+    public CameraShake cameraShake;
 
 
     public void ExplodeBarrel()
     {
         Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position + Vector3.up / 4, explosionRadius);
+
+        FindObjectOfType<AudioManager>().Play("BarellExplode");
 
         foreach (Collider2D col in hit)
         {
@@ -29,6 +35,7 @@ public class BarrelTile : MonoBehaviour
         }
 
         StartCoroutine(SpawnBarrel());
+        StartCoroutine(cameraShake.Shake(duration,magnitude));
     }
 
     public IEnumerator SpawnBarrel()
@@ -37,6 +44,8 @@ public class BarrelTile : MonoBehaviour
         animator.SetTrigger("Destroy");
 
         yield return new WaitForSeconds(barrelSpawnDelay);
+
+        FindObjectOfType<AudioManager>().Play("BarellSpawn");
 
         animator.ResetTrigger("Destroy");
         animator.SetTrigger("Spawn");

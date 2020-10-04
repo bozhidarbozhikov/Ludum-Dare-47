@@ -102,9 +102,12 @@ MonoBehaviour:
   explosionDamage: 40
   barrelSpawnDelay: 15
   health: 10
+  duration: 0
+  magnitude: 0
   capcol: {fileID: 3156356613270611257}
   spriteRenderer: {fileID: 3156356612312874922}
   target: {fileID: 3156356613270611256}
+  cameraShake: {fileID: 0}
 --- !u!95 &3156356612312874920
 Animator:
   serializedVersion: 3

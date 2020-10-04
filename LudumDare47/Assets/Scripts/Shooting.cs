@@ -39,6 +39,8 @@ public class Shooting : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(firepoint.position, transform.rotation * Vector3.up);
 
+        FindObjectOfType<AudioManager>().Play("PlayerShoot");
+
         if (hit)
         {
             Target target = hit.transform.GetComponent<Target>();

@@ -31,6 +31,7 @@ public class Target : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<AudioManager>().Play("EnemyDie");
                 Destroy(gameObject);
             }
         }
