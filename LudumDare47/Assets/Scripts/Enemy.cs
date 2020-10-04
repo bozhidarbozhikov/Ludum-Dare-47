@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform target;
+    Transform target;
     public AIPath aiPath;
 
     public Animator animator;
@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        target = FindObjectOfType<PlayerHealth>().transform;
     }
 
     // Update is called once per frame

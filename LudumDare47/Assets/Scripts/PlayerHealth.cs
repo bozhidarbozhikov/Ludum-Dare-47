@@ -38,10 +38,12 @@ public class PlayerHealth : MonoBehaviour
 
     Sprite UpdatedSprite()
     {
-        int spriteValue = (int)Mathf.Round(maxHealth / health);
+        float spriteValue = maxHealth / health;
 
-        if (spriteValue >= treasureStates.Length) spriteValue = 1;
-
-        return treasureStates[spriteValue - 1];
+        if (spriteValue <= 1.33f) return treasureStates[0];
+        else if (spriteValue <= 1.66f) return treasureStates[1];
+        else if (spriteValue <= 2) return treasureStates[2];
+        else if (spriteValue <= 2.5f) return treasureStates[3];
+        else return treasureStates[4];
     }
 }
