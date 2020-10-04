@@ -60,51 +60,6 @@ public class Shooting : MonoBehaviour
 
         lineRenderer.enabled = false;
     }
-
-    //    Vector3 mousePos;
-    //    public Camera cam;
-    //    public Rigidbody2D rb;
-    //    public float damage;
-    //    Vector3 shootpos;
-    //    Vector3 shootdir;
-    //    RaycastHit2D hit;
-    //    public LineRenderer lineRenderer;
-
-    //    // Update is called once per frame
-    //    void Update()
-    //    {
-    //        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-    //        if (Input.GetKeyDown(KeyCode.Mouse0))
-    //        {
-    //            AimAndShoot();
-    //        }
-    //    }
-    //    void AimAndShoot()
-    //    {
-    //        /*Vector2 lookDirection = mousePos - rb.position;
-    //        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
-    //        transform.eulerAngles = new Vector3(0, 0, angle);*/
-
-    //        RaycastHit2D hit = Physics2D.Raycast(transform.position, mousePos - transform.position);
-
-    //        if (hit)
-    //        {
-    //            Target target = hit.transform.GetComponent<Target>();
-
-    //            if (target != null) target.TakeDamage(damage);
-
-    //            lineRenderer.SetPosition(0, transform.position);
-    //            lineRenderer.SetPosition(1, mousePos);
-    //        }
-    //        else
-    //        {
-    //        }
-    //    }
-
-    //    private void OnDrawGizmosSelected()
-    //    {
-    //        Gizmos.DrawLine(transform.position, mousePos);
-    //    }
 }
 
 

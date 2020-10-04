@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Transform minecart;
     public float speed;
+    public bool canMove = true;
     List<Vector3> waypoints;
 
     int index = 0;
@@ -24,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, currentWaypoint) < 0.1f)
+        if (Vector3.Distance(transform.position, currentWaypoint) < 0.1f && canMove)
         {
             index++;
 
@@ -46,7 +47,8 @@ public class PlayerMovement : MonoBehaviour
     {
         direction = currentWaypoint - transform.position;
 
-        transform.Translate(direction.normalized * speed * Time.fixedDeltaTime);
+        if (canMove)
+            transform.Translate(direction.normalized * speed * Time.fixedDeltaTime);
     }
 
     void TurnMinecart(Vector3 destination)

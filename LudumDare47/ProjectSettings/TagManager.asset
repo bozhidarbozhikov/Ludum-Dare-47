@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Target
   - Treasure
+  - Rail
   layers:
   - Default
   - TransparentFX
